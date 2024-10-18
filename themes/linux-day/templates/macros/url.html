@@ -1,3 +1,15 @@
 {%- macro with_hash(path) -%}
 {{ get_url(path=path) }}?v={{ get_hash(path=path, sha_type=256, base64=true) }}
 {%- endmacro with_hash -%}
+
+{%- macro stylesheet(name) -%}
+{{ self::with_hash(path="/styles/" ~ name ~ ".css") }}
+{%- endmacro stylesheet -%}
+
+{%- macro image(name, extension) -%}
+{{ self::with_hash(path="/images/" ~ name ~ "." ~ extension) }}
+{%- endmacro image -%}
+
+{%- macro icon(name) -%}
+{{ self::with_hash(path="/icons/" ~ name ~ ".svg") }}
+{%- endmacro with_hash -%}

@@ -5,13 +5,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url::with_hash(path="styles/main.css") | safe }}" />
+    <link rel="stylesheet" href="{{ url::stylesheet(name="main") }}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   </head>
   <body>
     <header>
       <img
-        src="{{ url::with_hash(path="images/logo.svg") | safe }}"
+        src="{{ url::image(name="logo", extension="svg") }}"
         alt="Linux Day Logo"
       />
       <div id="header-content">
@@ -24,20 +24,22 @@
         </p>
         <div class="header-info">
           <img
-            src="icons/calendar.svg"
+            src="{{ url::icon(name="calendar") }}"
             alt="Data"
-            class="header-info-icon" />
+            class="header-info-icon"
+          />
           <p class="header-info-content">
             sabato 26 ottobre
           </p>
         </div>
         <div class="header-info">
           <img
-            src="icons/location.svg"
+            src="{{ url::icon(name="location") }}"
             alt="Luogo"
-            class="header-info-icon" />
+            class="header-info-icon"
+          />
           <p class="header-info-content">
-            Dipartimento di Ingegneria, Aula Magna
+            Dipartimento di Ingegneria
           </p>
         </div>
       </div>
