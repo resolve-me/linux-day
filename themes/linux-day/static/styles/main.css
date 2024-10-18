@@ -1,8 +1,9 @@
 @import "reset.css";
 @import "../fonts/Intro/main.css";
+@import "../fonts/Clear-Sans/main.css";
 
 :root {
-    --section-vertical-padding: 50px;
+    --section-vertical-padding: 25px;
     --section-horizontal-padding: 10vw;
 }
 
@@ -20,19 +21,18 @@ header {
     justify-content: space-evenly;
 }
 
-header > img {
-}
+header > img {}
 
 header > div#header-content {
     flex: wrap;
 }
 
 header > div#header-content > h1 {
-    color: white;
     font-family: "Intro", sans-serif;
     line-height: 1;
+    color: white;
+    text-align: center; 
     text-transform: uppercase;
-    text-align-last: center; 
 }
 
 header > div#header-content > h1 > span#header-title-top {
@@ -45,15 +45,19 @@ header > div#header-content > h1 > span#header-title-bottom {
     font-size: min(54pt, 10.7vw);
 }
 
-header > div#header-content > p#subtitle {
-    display: block;
-    font-family: "Intro", sans-serif;
+header > div#header-content > p#header-subtitle {
+    display: inline-block;
+    max-width: 500px;
+    margin: 0 0 10px 0;
+    font-family: "Clear Sans", sans-serif;
+    font-size: max(16pt, 2vw);
+    text-align: center; 
+    font-weight: bold;
 }
 
 header > div#header-content > div.header-info {
     margin: 10px 0 10px 0;
 }
-
 
 header > div#header-content > div.header-info > img.header-info-icon {
     display: inline-block;
@@ -63,6 +67,72 @@ header > div#header-content > div.header-info > img.header-info-icon {
 
 header > div#header-content > div.header-info > p.header-info-content {
     display: inline-block;
+    margin: 0 0 0 10px;
     vertical-align: middle;
-    margin-left: 5px;
+    font-family: "Clear Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+section#register {
+    padding:
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+    ;
+    background-color: #0063a9;
+}
+
+section#register > img#register-icon {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+}
+
+section#register > p#register-content {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+    font-family: "Clear Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+section#schedule {
+    padding:
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+    ;
+}
+
+section#schedule > h1 {
+    margin: 0 0 20px 0;
+    font-family: "Intro", sans-serif;
+    line-height: 1;
+    font-size: 32pt;
+    text-transform: uppercase;
+}
+
+section#schedule > article.schedule-entry {
+    margin: 0 0 10px 0;
+    font-family: "Clear Sans", sans-serif;
+    font-size: 14pt;
+}
+
+section#schedule > article.schedule-entry > p.schedule-time {
+    color: #0da08e;
+    font-weight: bold;
+}
+
+section#schedule > article.schedule-entry > p.schedule-title {}
+
+section#schedule > article.schedule-entry > p.schedule-author {
+    font-style: italic;
+}
+
+section#workshops {
+    background-color: #0da08e;
 }
