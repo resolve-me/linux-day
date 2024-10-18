@@ -1,0 +1,68 @@
+@import "reset.css";
+@import "../fonts/Intro/main.css";
+
+:root {
+    --section-vertical-padding: 50px;
+    --section-horizontal-padding: 10vw;
+}
+
+header {
+    display: flex;
+    padding:
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+        var(--section-vertical-padding)
+        var(--section-horizontal-padding)
+    ;
+    background-color: #0da08e;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header > img {
+}
+
+header > div#header-content {
+    flex: wrap;
+}
+
+header > div#header-content > h1 {
+    color: white;
+    font-family: "Intro", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align-last: center; 
+}
+
+header > div#header-content > h1 > span#header-title-top {
+    display: block;
+    font-size: min(72pt, 14.5vw);
+}
+
+header > div#header-content > h1 > span#header-title-bottom {
+    display: block;
+    font-size: min(54pt, 10.7vw);
+}
+
+header > div#header-content > p#subtitle {
+    display: block;
+    font-family: "Intro", sans-serif;
+}
+
+header > div#header-content > div.header-info {
+    margin: 10px 0 10px 0;
+}
+
+
+header > div#header-content > div.header-info > img.header-info-icon {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+}
+
+header > div#header-content > div.header-info > p.header-info-content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}

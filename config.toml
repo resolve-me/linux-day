@@ -1,0 +1,12 @@
+title = "Linux Day Messina 2024"
+base_url = "https://linuxday.messina.it"
+
+theme = "linux-day"
+
+compile_sass = false
+build_search_index = false
+
+[markdown]
+highlight_code = false
+
+[extra]

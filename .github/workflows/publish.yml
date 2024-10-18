@@ -1,0 +1,16 @@
+on: push
+name: Build and deploy GH Pages
+jobs:
+  publish:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@v0.19.2
+        env:
+          PAGES_BRANCH: public
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
