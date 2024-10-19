@@ -11,6 +11,7 @@
   <body>
     <header>
       <img
+        id="header-logo"
         src="{{ url::image(name="logo", extension="svg") }}"
         alt="Linux Day Logo"
       />
@@ -26,9 +27,9 @@
           <img
             src="{{ url::icon(name="calendar") }}"
             alt="Data"
-            class="header-info-icon"
+            class="icon"
           />
-          <p class="header-info-content">
+          <p class="label">
             Sabato 26 ottobre
           </p>
         </div>
@@ -36,9 +37,9 @@
           <img
             src="{{ url::icon(name="location") }}"
             alt="Luogo"
-            class="header-info-icon"
+            class="icon"
           />
-          <p class="header-info-content">
+          <p class="label">
             Dipartimento di Ingegneria
           </p>
         </div>
@@ -46,9 +47,9 @@
           <img
             src="{{ url::icon(name="location-2") }}"
             alt="Aula"
-            class="header-info-icon"
+            class="icon"
           />
-          <p class="header-info-content">
+          <p class="label">
             Aula Magna
           </p>
         </div>
@@ -64,19 +65,19 @@
     </section>
     <section id="schedule">
       <h1>Programma</h1>
-      <article class="schedule-entry">
-        <p class="schedule-time">09:00</p>
-        <p class="schedule-title">Registrazione partecipanti</h1>
-      </article>
-      <article class="schedule-entry">
-        <p class="schedule-time">09:30</p>
-        <h1></h1>
-        <p class="schedule-title">
-          DiscCheckEmu: a new and open source approach to cracking legacy
-          software
-        </p>
-        <p class="schedule-author">Luca D'Amico</p>
-      </article>
+      <section id="talks">
+        <article class="schedule-entry">
+          <p class="schedule-time">09:30</p>
+          <h1></h1>
+          <p class="schedule-title">
+            DiscCheckEmu: a new and open source approach to cracking legacy
+            software
+          </p>
+          <p class="schedule-author">Luca D'Amico</p>
+        </article>
+        <section id="workshops">
+        </section>
+      </section>
     </section>
   </body>
 </html>
