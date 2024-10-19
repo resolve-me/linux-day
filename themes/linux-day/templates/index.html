@@ -1,4 +1,5 @@
 {%- import "macros/url.html" as url -%}
+{%- set schedule = load_data(path="content/schedule.toml") %}
 
 <!doctype html>
 <html lang="it">
@@ -19,7 +20,9 @@
         <div id="header-content">
           <h1>
             <span id="header-title-top">Linux Day</span>
-            <span id="header-title-bottom">Messina 2024</span>
+            <span id="header-title-bottom">
+              Messina {{ config.extra.event_year }}
+            </span>
           </h1>
           <p id="header-subtitle" role="doc-subtitle">
             Giornata nazionale del software libero e delle libertà digitali
@@ -36,7 +39,7 @@
             class="icon"
           />
           <p class="label">
-            Sabato 26 ottobre
+            {{ config.extra.event_date }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -46,7 +49,7 @@
             class="icon"
           />
           <p class="label">
-            Dipartimento di Ingegneria
+            {{ config.extra.event_location }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -56,7 +59,7 @@
             class="icon"
           />
           <p class="label">
-            Aula Magna
+            {{ config.extra.event_location_extra }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -66,10 +69,52 @@
             class="icon"
           />
           <p class="label">
-            <a href="https://evenbrite.com/">
+            <a href={{ config.extra.eventbrite_url }}>
               Iscriviti!
             </a>
           </p>
+        </div>
+      </div>
+    </section>
+    <section id="schedule">
+      <div id="schedule-container" class="container">
+        <h1>Programma</h1>
+        <div id="schedule-content">
+          <section id="schedule-talks">
+            <h2>Interventi</h2>
+            <article class="schedule-entry">
+              <p class="schedule-time">{{ schedule.intro.time }}</p>
+              <p class="schedule-title">{{ schedule.intro.title }}</p>
+            </article>
+            {%- for talk in schedule.talks -%}
+            <article class="schedule-entry">
+              <p class="schedule-time">{{ talk.time }}</p>
+              <p class="schedule-title">{{ talk.title }}</p>
+              <p class="schedule-author">
+                A cura di
+                <span class="schedule-author-name">{{ talk.author }}</span>
+              </p>
+            </article>
+            {%- endfor -%}
+            <article class="schedule-entry">
+              <p class="schedule-time">{{ schedule.lunch.time }}</p>
+              <p class="schedule-title">{{ schedule.lunch.title }}</p>
+            </article>
+          </section>
+          <section id="schedule-workshops">
+            <h2>Workshop</h2>
+            {%- for workshop in schedule.workshops -%}
+            <article class="schedule-entry">
+              <p class="schedule-room">{{ workshop.room}}</p>
+              <p class="schedule-time">{{ workshop.time }}</p>
+              <p class="schedule-title">{{ workshop.title }}</p>
+              <p class="schedule-author">
+                A cura di
+                <span class="schedule-author-name">{{ workshop.author }}</span>
+              </p>
+            </article>
+            {%- endfor -%}
+          </section>
         </div>
       </div>
     </section>

@@ -26,9 +26,17 @@ p, li {
     font-size: 14pt;
 }
 
-h1 {
+h1, h2 {
     font-family: "Intro", sans-serif;
+}
+
+h1 {
     font-size: 32pt;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 24pt;
     text-transform: uppercase;
 }
 
@@ -51,6 +59,10 @@ div.icon-group p.label {
 
 
 /* Common Layout **************************************************************/
+
+body {
+    background-color: var(--white);
+}
 
 .container {
     max-width: 1000px;
@@ -136,4 +148,48 @@ section#quick-info p.label {
 
 section#quick-info p.label a {
     color: var(--white);
+}
+
+
+/* Schedule *******************************************************************/
+
+section#schedule div#schedule-content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+section#schedule article.schedule-entry {
+    margin: 0 0 20px 0;
+}
+
+section#schedule section#schedule-talks {
+    flex-grow: 3;
+    flex-basis: 0
+}
+
+section#schedule article.schedule-entry p.schedule-time {
+    color: var(--accent-2);
+    font-weight: bold;
+}
+
+section#schedule article.schedule-entry p.schedule-room {
+    display: inline;
+    font-weight: bold;
+    float: right;
+}
+
+section#schedule article.schedule-entry p.schedule-title {
+    font-weight: bold;
+}
+
+section#schedule article.schedule-entry p.schedule-author {}
+
+section#schedule article.schedule-entry span.schedule-author-name {
+    font-style: italic;
+}
+
+section#schedule section#schedule-workshops {
+    flex-grow: 2;
+    flex-basis: 0;
 }
