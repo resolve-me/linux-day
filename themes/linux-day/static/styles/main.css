@@ -11,7 +11,7 @@
     --white: #f0f0f0;
     --black: #191919;
     --accent-1: #0da08e;
-    --acent-2: #0063a9;
+    --accent-2: #0063a9;
 }
 
 
@@ -35,116 +35,99 @@ h1 {
 
 /* Icons **********************************************************************/
 
-img.icon {
-    display: inline-block;
-    width: 30px;
-    vertical-align: middle;
+div.icon-group {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
 }
 
-p.label {
-    display: inline-block;
-    margin: 0 0 0 10px;
-    vertical-align: middle;
+div.icon-group img.icon {
+    width: 30px;
+}
+
+div.icon-group p.label {
     font-weight: bold;
 }
 
 
 /* Common Layout **************************************************************/
 
-header, section {
-    padding:
-        25px
-        calc(22vw - 55px)
-        25px
-        calc(22vw - 55px)
-    ;
+.container {
+    max-width: 1000px;
+    padding: 25px;
+    margin: 0 auto 0 auto;
 }
 
 
 /* Header *********************************************************************/
 
 header {
+    background-color: var(--accent-1);
+}
+
+header div#header-container {
     display: flex;
     background-color: var(--accent-1);
     flex-wrap: wrap;
+    column-gap: 30px;
     align-items: center;
     justify-content: space-between;
 }
 
-header > div#header-content > h1 {
-    line-height: 1;
-    color: var(--white);
-    text-align: center; 
+header img#header-logo,
+header div#header-content
+{
+    margin: 0 auto 0 auto;
 }
 
-header > div#header-content > h1 > span#header-title-top {
+header div#header-container img#header-logo {
+    display: block;
+    max-width: 300px;
+}
+
+header div#header-content h1 {
+    line-height: 1;
+    color: var(--white);
+    text-align: center;
+}
+
+header div#header-content h1 span#header-title-top {
     display: block;
     font-size: min(72pt, 14.5vw);
 }
 
-header > div#header-content > h1 > span#header-title-bottom {
+header div#header-content h1 span#header-title-bottom {
     display: block;
     font-size: min(54pt, 10.7vw);
 }
 
-header > div#header-content > p#header-subtitle {
+header div#header-content p#header-subtitle {
     display: block;
     max-width: 500px;
-    font-size: max(16pt, 2vw);
-    text-align: center; 
+    font-size: max(20pt, 2.2vw);
+    text-align: center;
     font-weight: bold;
 }
 
-header > div#header-content > div.header-info {
-    margin: 10px 0 10px 0;
+
+/* Quick information **********************************************************/
+
+section#quick-info {
+    background-color: var(--accent-2);
 }
 
-section#register {
-    background-color: #0063a9;
+section#quick-info div#quick-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 15px;
 }
 
-section#register > img#register-icon {
-    display: inline-block;
-    width: 30px;
-    vertical-align: middle;
+section#quick-info p.label {
+    color: var(--white);
 }
 
-section#register > p#register-content {
-    display: inline-block;
-    margin: 0 0 0 10px;
-    vertical-align: middle;
-    font-family: "Clear Sans", sans-serif;
-    font-weight: bold;
-    color: white;
-}
-
-section#schedule {}
-
-section#schedule > h1 {
-    margin: 0 0 20px 0;
-    font-family: "Intro", sans-serif;
-    line-height: 1;
-    font-size: 32pt;
-    text-transform: uppercase;
-}
-
-section#schedule > article.schedule-entry {
-    margin: 0 0 10px 0;
-    font-family: "Clear Sans", sans-serif;
-    font-size: 14pt;
-}
-
-section#schedule > article.schedule-entry > p.schedule-time {
-    color: #0da08e;
-    font-weight: bold;
-}
-
-section#schedule > article.schedule-entry > p.schedule-title {}
-
-section#schedule > article.schedule-entry > p.schedule-author {
-    font-style: italic;
-}
-
-section#more-info{
-    background-color: #0da08e;
+section#quick-info p.label a {
+    color: var(--white);
 }

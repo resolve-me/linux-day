@@ -10,74 +10,68 @@
   </head>
   <body>
     <header>
-      <img
-        id="header-logo"
-        src="{{ url::image(name="logo", extension="svg") }}"
-        alt="Linux Day Logo"
-      />
-      <div id="header-content">
-        <h1>
-          <span id="header-title-top">Linux Day</span>
-          <span id="header-title-bottom">Messina 2024</span>
-        </h1>
-        <p id="header-subtitle" role="doc-subtitle">
-          Giornata nazionale del software libero e delle libertà digitali
-        </p>
-        <div class="header-info">
-          <img
-            src="{{ url::icon(name="calendar") }}"
-            alt="Data"
-            class="icon"
+      <div id="header-container" class="container">
+        <img
+          id="header-logo"
+          src="{{ url::image(name="logo", extension="svg") }}"
+          alt="Linux Day Logo"
           />
-          <p class="label">
-            Sabato 26 ottobre
-          </p>
-        </div>
-        <div class="header-info">
-          <img
-            src="{{ url::icon(name="location") }}"
-            alt="Luogo"
-            class="icon"
-          />
-          <p class="label">
-            Dipartimento di Ingegneria
-          </p>
-        </div>
-        <div class="header-info">
-          <img
-            src="{{ url::icon(name="location-2") }}"
-            alt="Aula"
-            class="icon"
-          />
-          <p class="label">
-            Aula Magna
+        <div id="header-content">
+          <h1>
+            <span id="header-title-top">Linux Day</span>
+            <span id="header-title-bottom">Messina 2024</span>
+          </h1>
+          <p id="header-subtitle" role="doc-subtitle">
+            Giornata nazionale del software libero e delle libertà digitali
           </p>
         </div>
       </div>
     </header>
-    <section id="register">
-      <img
-        src="{{ url::icon(name="receipt") }}"
-        alt="Registrazione"
-        id="register-icon"
-      />
-      <p id="register-content">Registrati su Eventbrite</p>
-    </section>
-    <section id="schedule">
-      <h1>Programma</h1>
-      <section id="talks">
-        <article class="schedule-entry">
-          <p class="schedule-time">09:30</p>
-          <h1></h1>
-          <p class="schedule-title">
-            DiscCheckEmu: a new and open source approach to cracking legacy
-            software
+    <section id="quick-info">
+      <div id="quick-info-container" class="container">
+        <div class="quick-info-entry icon-group">
+          <img
+            src="{{ url::icon(name="calendar") }}"
+            alt="Data"
+            class="icon"
+            />
+          <p class="label">
+            Sabato 26 ottobre
           </p>
-          <p class="schedule-author">Luca D'Amico</p>
-        </article>
-        <section id="workshops">
-        </section>
-      </section>
+        </div>
+        <div class="quick-info-entry icon-group">
+          <img
+            src="{{ url::icon(name="location") }}"
+            alt="Luogo"
+            class="icon"
+            />
+          <p class="label">
+            Dipartimento di Ingegneria
+          </p>
+        </div>
+        <div class="quick-info-entry icon-group">
+          <img
+            src="{{ url::icon(name="location-2") }}"
+            alt="Aula"
+            class="icon"
+            />
+          <p class="label">
+            Aula Magna
+          </p>
+        </div>
+        <div class="quick-info-entry icon-group">
+          <img
+            src="{{ url::icon(name="receipt") }}"
+            alt="Iscrizione"
+            class="icon"
+            />
+          <p class="label">
+            <a href="https://evenbrite.com/">
+              Iscriviti!
+            </a>
+          </p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
