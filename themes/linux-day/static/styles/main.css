@@ -17,7 +17,7 @@
 
 /* Typograhy ******************************************************************/
 
-p, li, h1 {
+h1, h2, p, a {
     color: var(--black);
 }
 
@@ -192,4 +192,27 @@ section#schedule article.schedule-entry span.schedule-author-name {
 section#schedule section#schedule-workshops {
     flex-grow: 2;
     flex-basis: 0;
+}
+
+
+/* More information ***********************************************************/
+
+section#more-info {
+    background-color: var(--accent-2);
+}
+
+section#more-info h1,
+section#more-info li,
+section#more-info a
+{
+    color: var(--white);
+}
+
+section#more-info ul {
+    padding: 0 0 0 20px;
+    list-style-type: "🢒 ";
+}
+
+section#more-info li a {
+    font-weight: bold;
 }
