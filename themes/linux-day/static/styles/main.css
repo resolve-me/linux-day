@@ -120,12 +120,18 @@ section#quick-info div#quick-info-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    row-gap: 15px;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+section#quick-info div.quick-info-entry {
+    flex-grow: 1;
 }
 
 section#quick-info p.label {
     color: var(--white);
+    font-size: 16pt;
 }
 
 section#quick-info p.label a {
