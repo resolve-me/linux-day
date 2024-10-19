@@ -9,7 +9,7 @@ title = "Pausa pranzo"
 [[talks]]
 time = "9:30"
 title = "DiscCheckEmu: un nuovo approccio open source al cracking dei software legacy"
-author = "Luca D'Amico"
+author = "Luca D’Amico"
 
 [[talks]]
 time = "10:00"
@@ -28,12 +28,12 @@ author = "Salvatore Todaro"
 
 [[talks]]
 time = "11:30"
-title = "Da Zero a Git: Le Basi per la Collaborazione"
+title = "Da zero a Git: le basi dello sviluppo collaborativo"
 author = "Antonio Battaglia"
 
 [[talks]]
 time = "12:00"
-title = "Offensive Solitaire, attacco e difesa su GNU/Linux"
+title = "Offensive Solitaire: attacco e difesa su GNU/Linux"
 author = "Fabio Genovese"
 
 [[talks]]
@@ -55,7 +55,7 @@ room = "Aula 422"
 
 [[workshops]]
 time = "15:00"
-title = "L'editor di testo Vim"
+title = "L’editor di testo Vim"
 author = "Michele Arena"
 room = "Aula 423"
 
