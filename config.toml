@@ -16,3 +16,7 @@ event_location = "Dipartimento di Ingegneria"
 event_location_extra = "Aula Magna"
 
 eventbrite_url = "https://www.eventbrite.com/e/linux-day-2024-tickets-1051924503507"
+
+[extra.meta]
+description = "Giornata nazionale del software libero e delle libertà digitali. Sabato 26 ottobre al Dipartimento di Ingegneria"
+keywords = "linux, linux day, messina, 2024, free software, software libero, libertà digitali, unime, ingegneria"

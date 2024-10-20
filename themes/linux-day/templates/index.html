@@ -21,6 +21,21 @@
       rel="manifest"
       href="{{ url::with_hash(path="manifest/site.webmanifest") }}"
     />
+    <meta name="description" content="{{ config.extra.meta.description }}" />
+    <meta name="keywords" content="{{ config.extra.meta.keywords }}" />
+    <meta property="og:url" content="{{ config.base_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ config.title }}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:description" content="{{ config.extra.meta.description }}" />
+    <meta property="og:image" content="{{ url::image(name="logo", extension="svg") }}" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="Linux Day logo" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="{{ config.base_url }}" />
+    <meta name="twitter:title" content="{{ config.title }}" />
+    <meta name="twitter:description" content="{{ config.extra.meta.description }}" />
+    <meta name="twitter:image" content="{{ url::image(name="logo", extension="svg") }}">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   </head>
   <body>
