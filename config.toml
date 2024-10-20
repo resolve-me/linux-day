@@ -10,11 +10,12 @@ build_search_index = false
 highlight_code = false
 
 [extra]
-event_date = "Sabato 26 ottobre"
-event_year = "2024"
-event_location = "Dipartimento di Ingegneria"
-event_location_extra = "Aula Magna"
 
+[extra.event]
+date = "Sabato 26 ottobre"
+year = "2024"
+location = "Dipartimento di Ingegneria"
+location_extra = "Aula Magna"
 eventbrite_url = "https://www.eventbrite.com/e/linux-day-2024-tickets-1051924503507"
 
 [extra.meta]

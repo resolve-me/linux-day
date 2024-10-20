@@ -23,7 +23,7 @@
     />
     <meta name="description" content="{{ config.extra.meta.description }}" />
     <meta name="keywords" content="{{ config.extra.meta.keywords }}" />
-    <meta property="og:url" content="{{ config.base_url }}" />
+    <meta property="og:url" content="{{ config.base_url | safe }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ config.title }}" />
     <meta property="og:site_name" content="{{ config.title }}" />
@@ -32,7 +32,7 @@
     <meta property="og:image:type" content="image/svg+xml" />
     <meta property="og:image:alt" content="Linux Day logo" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="{{ config.base_url }}" />
+    <meta name="twitter:url" content="{{ config.base_url | safe }}" />
     <meta name="twitter:title" content="{{ config.title }}" />
     <meta name="twitter:description" content="{{ config.extra.meta.description }}" />
     <meta name="twitter:image" content="{{ url::image(name="logo", extension="svg") }}">
@@ -50,7 +50,7 @@
           <h1>
             <span id="header-title-top">Linux Day</span>
             <span id="header-title-bottom">
-              Messina {{ config.extra.event_year }}
+              Messina {{ config.extra.event.year }}
             </span>
           </h1>
           <p id="header-subtitle" role="doc-subtitle">
@@ -68,7 +68,7 @@
             class="icon"
           />
           <p class="label">
-            {{ config.extra.event_date }}
+            {{ config.extra.event.date }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -78,7 +78,7 @@
             class="icon"
           />
           <p class="label">
-            {{ config.extra.event_location }}
+            {{ config.extra.event.location }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -88,7 +88,7 @@
             class="icon"
           />
           <p class="label">
-            {{ config.extra.event_location_extra }}
+            {{ config.extra.event.location_extra }}
           </p>
         </div>
         <div class="quick-info-entry icon-group">
@@ -98,7 +98,7 @@
             class="icon"
           />
           <p class="label">
-            <a href={{ config.extra.eventbrite_url }}>
+            <a href={{ config.extra.event.eventbrite_url }}>
               Iscriviti!
             </a>
           </p>
@@ -153,7 +153,7 @@
         <ul>
           <li>
             L’accesso all’evento è gratuito ma è richiesta la registrazione tramite
-            <a href="{{ config.extra.eventbrite_url }}">Eventbrite</a>.
+            <a href="{{ config.extra.event.eventbrite_url }}">Eventbrite</a>.
           </li>
           <li>
             Porta con te un laptop per partecipare attivamente alle attività
