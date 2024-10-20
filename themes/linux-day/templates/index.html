@@ -7,6 +7,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ url::stylesheet(name="main") }}" />
+    <link
+      rel="icon"
+      href="{{ url::with_hash(path="manifest/favicon.ico") }}"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url::with_hash(path="manifest/apple-touch-icon.png") }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url::with_hash(path="manifest/site.webmanifest") }}"
+    />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   </head>
   <body>
