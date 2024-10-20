@@ -45,22 +45,22 @@ author = "Vincenzo Bucaria"
 time = "15:00"
 title = "Linux Install Fest"
 author = "MetaGriPwn HackLab"
-room = "Aula 421"
+room = "Aula Magna"
 
 [[workshops]]
 time = "15:00"
 title = "Come k8s si usano i container?"
 author = "Alberto Pimpo"
-room = "Aula 422"
+room = "Aula 426"
 
 [[workshops]]
 time = "15:00"
 title = "L’editor di testo Vim"
 author = "Michele Arena"
-room = "Aula 423"
+room = "Aula 427"
 
 [[workshops]]
 time = "15:00"
 title = "LLM open source"
 author = "Gaetano Pispisa"
-room = "Aula 424"
+room = "Aula 428"
